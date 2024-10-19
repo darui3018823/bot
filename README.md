@@ -1,1 +1,1 @@
-# bot
+https://bot.daruks.com/
