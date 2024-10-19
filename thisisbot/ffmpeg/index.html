@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--埋め込み-->
+    <meta property="og:title" content="daruks.com">
+    <meta property="og:description" content="ffmpeg Install Guide">
+    <meta property="og:url" content="https://bot.daruks.com/thisisbot/ffmpeg">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detail install ffmpeg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="saijoubu">FFmpeg Installation guide</h1>
+    <br>
+
+    <h1 class="midasi1">まず初めに</h1>
+    <p>このページに来たということはおそらくyt-dlpのコマンドで警告が出たのだと思われます。<br>
+    FFmpegは本コマンドで非常に重要であり、動画をいい画質でダウンロードするためにも必須と言えます。</p>
+    <p>このガイドでは、FFmpegのインストール手順について詳しく説明します。<br>
+    FFmpegを正しくインストールすることで、さまざまなメディアファイルの変換や処理が可能になり、例えばyt-dlpなどのツールを最大限に活用できます。</p>
+    <p>FFmpegをまだインストールしていない場合、または使い方がわからない場合は、このガイドに従ってインストールを行ってください。</p>
+    <br>
+
+    <h1 class="midasi1">なぜ必要か</h1>
+    <p>FFmpegは、音声や動画ファイルを扱うための強力なマルチメディアフレームワークです。<br>
+    多くのツールやアプリケーションがFFmpegに依存しており、その機能を利用することで、様々なメディア処理が可能になります。</p>
+    <p>例えば、yt-dlpなどのダウンロードツールは、動画と音声のストリームを結合したり、異なるフォーマットに変換する際にFFmpegを使用します。<br>
+    これにより、ユーザーはダウンロードしたコンテンツを自分のニーズに合わせた形式で利用することができます。</p>
+    <p>FFmpegをインストールすることで、これらの機能を最大限に活用できるようになり、メディアファイルの編集や変換、ストリームの処理が効率的に行えるようになります。</p>
+    <br>
+
+    <h1 class="midasi1">インストール方法</h1>
+    以下の項目からOSをお選びください。
+    <br>
+    <br>
+    <div class="accordion">
+        <div class="accordion-header">
+            <button class="accordion-button">Windows</button>
+        </div>
+        <div class="accordion-content">
+            <p>Windows向けにビルドされたFFmpeg(gyan.dev)をインストールします。</p>
+            
+            <ol>
+              <li>
+                <p><strong>ステップ1: FFmpegをダウンロードする</strong></p>
+                <p>ブラウザを開き、以下のURLにアクセスします: <a href="https://www.gyan.dev/ffmpeg/builds/" target="_blank">https://www.gyan.dev/ffmpeg/builds/</a></p>
+                <p>ページが表示されたら、「Release builds」セクションまでスクロールします。</p>
+                <p>「latest release」項目内の"ffmpeg-release-essentials.zip"をダウンロードします。</p>
+              </li>
+          
+              <li>
+                <p><strong>ステップ2: FFmpegファイルを抽出する</strong></p>
+                <p>ダウンロードしたZIPファイルを右クリックし、「すべて展開」を選択します。</p>
+                <p>展開先のフォルダを選択し、解凍を開始します。解凍先は自由です。</p>
+                <p>解凍後、フォルダ内に「ffmpeg」フォルダが作成され、その中に「bin」フォルダが含まれています。さらにその中に「ffmpeg.exe」があります。</p>
+              </li>
+              
+              <li>
+                <p><strong>ステップ3: システムのPATHにFFmpegを追加する</strong></p>
+                <p>スタートメニューを開き、「環境変数」と検索し、「システム環境変数を編集」を選択します。</p>
+                <p>「システムのプロパティ」ウィンドウが開いたら、「環境変数」ボタンをクリックします。</p>
+                <p>「システム環境変数」セクションで「Path」変数を探し、選択して「編集」ボタンをクリックします。</p>
+                <p>「新規」をクリックし、FFmpegの「bin」フォルダのパス（例: `C:\Users\<ユーザー名>\Downloads\ffmpeg\bin`）を追加します。</p>
+                <p>すべてのウィンドウで「OK」をクリックして変更を保存します。</p>
+              </li>
+              
+              <li>
+                <p><strong>ステップ4: インストールの確認</strong></p>
+                <p>コマンドプロンプトを開きます（スタートメニューから「cmd」と入力してEnter）。</p>
+                <p>コマンドプロンプトで「ffmpeg」と入力し、Enterキーを押します。</p>
+                <p>正常にインストールされていれば、FFmpegのバージョン情報や利用可能なコマンドが表示されます。</p>
+              </li>
+            </ol>
+            
+            <p>以上の手順を実行することで、gyan.devからFFmpegをWindowsにインストールすることができます。</p>
+          </div>
+          
+          
+    </div>
+
+    <br>
+
+    <div class="accordion">
+        <div class="accordion-header">
+            <button class="accordion-button">macOS</button>
+        </div>
+        <div class="accordion-content">
+            <p>macOSにFFmpegをインストールするには、Homebrewを使用するのが最も簡単な方法です。</p>
+            <p>HomebrewはmacOSのパッケージ管理ツールで、多くのアプリケーションやライブラリのインストールを簡単に行うことができます。</p>
+            <p>以下の手順でFFmpegをインストールしてください:</p>
+            <ol>
+                <li>
+                    <p><strong>Homebrewのインストールを確認する</strong></p>
+                    <p>ターミナルを開いて以下のコマンドを入力し、Homebrewがインストールされているか確認します:</p>
+                    <pre><code>brew --version</code></pre>
+                    <p>Homebrewがインストールされていない場合は、以下のコマンドを入力してインストールします:</p>
+                    <pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+                </li>
+                <li>
+                    <p><strong>FFmpegのインストール</strong></p>
+                    <p>次に、Homebrewを使用してFFmpegをインストールします。以下のコマンドを入力してください:</p>
+                    <pre><code>brew install ffmpeg</code></pre>
+                </li>
+                <li>
+                    <p><strong>インストールの確認</strong></p>
+                    <p>インストールが完了したら、以下のコマンドを入力してFFmpegのバージョン情報を表示します:</p>
+                    <pre><code>ffmpeg -version</code></pre>
+                  <p>正しくインストールされていれば、FFmpegのバージョン情報が表示されます。</p>
+                </li>
+            </ol>
+            <p>以上の手順で、macOSにFFmpegを正常にインストールすることができます。</p>
+        </div>
+    </div>
+
+    <br>
+    <div class="accordion">
+        <div class="accordion-header">
+            <button class="accordion-button">Linux</button>
+        </div>
+        <div class="accordion-content">
+            <p>Linux向けにビルドされたFFmpegをインストールします。</p>
+            <p><strong>注意:これはUbuntu向けであり、他Linuxでは動作しない可能性があります。</strong></p>
+            
+            <ol>
+            <li>
+                <p><strong>ステップ1: FFmpegをインストールする</strong></p>
+                <p>ターミナルを開きます。</p>
+                <p>次のコマンドを入力して、FFmpegをインストールします:</p>
+                <pre><code>sudo apt update && sudo apt install ffmpeg</code></pre>
+                <p>このコマンドは、システムのパッケージリストを更新し、FFmpegをインストールします。</p>
+            </li>
+        
+            <li>
+                <p><strong>ステップ2: インストールの確認</strong></p>
+                <p>インストールが完了したら、次のコマンドを入力してFFmpegのバージョンを確認します:</p>
+                <pre><code>ffmpeg -version</code></pre>
+                <p>正常にインストールされていれば、FFmpegのバージョン情報が表示されます。</p>
+            </li>
+        
+            <li>
+                <p><strong>ステップ3: 依存関係の確認</strong></p>
+                <p>FFmpegが正しく動作するためには、必要な依存関係がすべてインストールされていることを確認します。</p>
+                <p>次のコマンドを入力して、FFmpegに必要なライブラリをインストールします:</p>
+                <pre><code>sudo apt install libavcodec-extra</code></pre>
+            </li>
+        
+            <li>
+                <p><strong>ステップ4: 動作確認</strong></p>
+                <p>最後に、以下のコマンドを入力してFFmpegが正常に動作することを確認します:</p>
+                <pre><code>ffmpeg -h</code></pre>
+                <p>ヘルプ情報が表示されれば、FFmpegは正常に動作しています。</p>
+            </li>
+            </ol>
+            <p>以上の手順を実行することで、LinuxにFFmpegをインストールすることができます。</p>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="footer">
+        <div class="footer-left">
+            <p>FFmpegの著作権は各build製作者、及びその協力者に帰属します。</p>
+            <p>Windows builds from<br>
+            <a href="https://www.gyan.dev/ffmpeg/builds/" target="_blank">https://www.gyan.dev/ffmpeg/builds/</a></p>
+            <p>Ubuntu ffmpeg Package<br>
+            <a href="https://launchpad.net/ubuntu/+source/ffmpeg" target="_blank">https://launchpad.net/ubuntu/+source/ffmpeg</a></p>
+            <p>ffmpeg build from macOS<br>
+            <a href="https://brew.sh/ja/" target="_blank">https://brew.sh/ja/</a></p>
+        </div>
+        <div class="footer-right">
+            <p>Created on <a href="https://github.com">GitHub Pages.</a></p>
+            <p>© 2024 darui3018823. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

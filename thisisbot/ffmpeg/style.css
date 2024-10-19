@@ -1,0 +1,115 @@
+body {
+    font-family: "Noto Sans JP", sans-serif; /* フォントファミリーを指定 */
+    font-optical-sizing: auto; /* フォントの光学サイズ調整 */
+    font-weight: 400; /* 標準の太さ */
+    font-size: 16px; /* 本文のサイズ */
+    color: #fff; /* 文字色を白に設定 */
+    background-color: #222; /* 背景色を黒に設定 */
+  }
+  
+  h1 {
+    font-weight: 700; /* ヘッダーは太字 */
+    font-size: 24px; /* ヘッダーサイズ */
+  }
+
+.saijoubu {
+    padding: 1rem 2rem;
+    border-left: 5px dotted #fff;
+    background: #222;
+}
+
+.midasi1 {
+    position: relative;
+    padding: 1.5rem 1rem;
+    color: #fff;
+  }
+  
+  .midasi1:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    content: '';
+    
+    background-image: -webkit-repeating-linear-gradient(135deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+    background-image: repeating-linear-gradient(-45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+    background-size: 7px 7px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+
+.white-text {
+    color: #fff;
+}
+
+.accordion {
+    margin: 10px;
+    border: 1px solid #ccc; /* 枠線の色はそのままにするか、白に変更 */
+    border-radius: 5px;
+  }
+  
+  .accordion-header {
+    background-color: #333; /* ヘッダーの背景色を暗い灰色に設定 */
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .accordion-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+    color: #fff; /* ボタンの文字色を白に設定 */
+    cursor: pointer;
+  }
+  
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 10px;
+    background-color: #444; /* コンテンツの背景色を少し明るい灰色に設定 */
+  }
+  
+  .accordion-content p {
+    margin: 10px 0;
+    color: #fff; /* コンテンツ内の文字色を白に設定 */
+  }
+  
+  .accordion-content.open {
+    max-height: 670px; /* 開いたときの高さを調整 */
+    padding: 10px;
+  }
+
+
+.footer {
+    height: 24
+    0px; /* 高さを200pxに設定 */
+    background-color: #111; /* 背景色を#111に設定 */
+    color: #fff; /* テキストの色を白に設定 */
+    display: flex; /* フレックスボックスを使用して配置を調整 */
+    justify-content: space-between; /* 左右に分ける */
+    width: 100%; /* 横幅を100%に設定 */
+    position: relative; /* 親要素の基準位置を設定 */
+    padding: 0 20px; /* 左右にパディングを追加 */
+    box-sizing: border-box; /* ボックスサイズを含める */
+    align-items: flex-end; /* 縦方向は下揃え */
+}
+.footer-left {
+    text-align: left; /* 左側のテキストを左揃え */
+}
+
+.footer-right {
+    text-align: right; /* 右側のテキストを右揃え */
+    color: #444;
+}
+
+.github-logo {
+    width: 24px; /* ロゴのサイズを調整 */
+    height: 24px; /* ロゴのサイズを調整 */
+    margin-right: 8px; /* テキストとのスペースを確保 */
+    vertical-align: middle; /* テキストと縦方向を揃える */
+}
